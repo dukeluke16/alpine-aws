@@ -1,6 +1,10 @@
 #!/bin/zsh
-set -e
+set -euo pipefail
 
-# use pipenv shell environment
 export PIPENV_IGNORE_VIRTUALENVS=0
-pipenv shell
+
+if [[ $# -eq 0 ]]; then
+  pipenv shell
+else
+  pipenv run "$@"
+fi

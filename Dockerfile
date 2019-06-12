@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.9
 
 MAINTAINER Luke Thompson <luke@dukeluke.com>
 LABEL Description="This image will be used for Concourse Pipelines executing awscli"
